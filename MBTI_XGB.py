@@ -163,8 +163,8 @@ if __name__ == '__main__':
 	data = pd.read_csv(dataset)
 
 	X = data.posts.values
-	y = []
+	y = data.type.values
 
-	MBTI_XGB(X, y)
+	MBTI_XGB(X[1:200], y[1:200])
 	MBTI_XGB(X, save_txt=True)
 '''
